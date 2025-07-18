@@ -85,7 +85,7 @@ int backend_init_fbdev(backend_t *backend)
  */
 static lv_display_t *init_fbdev(void)
 {
-    const char *device = getenv_default("LV_LINUX_FBDEV_DEVICE", "/dev/fb0");
+    const char *device = getenv_default("LV_LINUX_FBDEV_DEVICE", "/dev/fb1");
     lv_display_t *disp = lv_linux_fbdev_create();
 
     if (disp == NULL) {

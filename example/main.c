@@ -29,7 +29,7 @@ int main(int argc, char **argv)
     /* Initialize LVGL. */
     lv_init();
 
-    settings.window_width = 800;
+    settings.window_width = 320;
     settings.window_height = 480;
 
     /* Initialize the configured default backend */
