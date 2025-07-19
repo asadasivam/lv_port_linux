@@ -42,6 +42,9 @@ static char *selected_backend;
 /* Global simulator settings, defined in lv_linux_backend.c */
 extern simulator_settings_t settings;
 
+/*extern functions*/
+//extern void driver_backends_register(void);
+
 
 /**
  * @brief Print LVGL version
@@ -67,7 +70,7 @@ static void print_usage(void)
 
 /**
  * @brief Configure simulator
- * @description process arguments recieved by the program to select
+ * @description process arguments recieved by thBBe program to select
  * appropriate options
  * @param argc the count of arguments in argv
  * @param argv The arguments

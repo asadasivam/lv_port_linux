@@ -1,6 +1,5 @@
 {
     "files.associations": {
-        "lv_demos.h": "c",
-        "lvgl.h": "c"
+        "stdlib.h": "c"
     }
 }
