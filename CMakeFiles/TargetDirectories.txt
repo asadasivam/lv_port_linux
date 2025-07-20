@@ -8,6 +8,7 @@
 /home/sadash/lv_port_linux/CMakeFiles/install/local.dir
 /home/sadash/lv_port_linux/CMakeFiles/install/strip.dir
 /home/sadash/lv_port_linux/lvgl/CMakeFiles/lvgl.dir
+/home/sadash/lv_port_linux/lvgl/CMakeFiles/lvgl_thorvg.dir
 /home/sadash/lv_port_linux/lvgl/CMakeFiles/lvgl_examples.dir
 /home/sadash/lv_port_linux/lvgl/CMakeFiles/lvgl_demos.dir
 /home/sadash/lv_port_linux/lvgl/CMakeFiles/edit_cache.dir

@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/sadash/lv_port_linux/src/lib/display_backends/fbdev.c" "CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.o" "gcc" "CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.o.d"
   "/home/sadash/lv_port_linux/src/lib/driver_backends.c" "CMakeFiles/lvgl_linux.dir/src/lib/driver_backends.c.o" "gcc" "CMakeFiles/lvgl_linux.dir/src/lib/driver_backends.c.o.d"
+  "/home/sadash/lv_port_linux/src/lib/indev_backends/evdev.c" "CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.o" "gcc" "CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.o.d"
   "/home/sadash/lv_port_linux/src/lib/mouse_cursor_icon.c" "CMakeFiles/lvgl_linux.dir/src/lib/mouse_cursor_icon.c.o" "gcc" "CMakeFiles/lvgl_linux.dir/src/lib/mouse_cursor_icon.c.o.d"
   "/home/sadash/lv_port_linux/src/lib/simulator_util.c" "CMakeFiles/lvgl_linux.dir/src/lib/simulator_util.c.o" "gcc" "CMakeFiles/lvgl_linux.dir/src/lib/simulator_util.c.o.d"
   )

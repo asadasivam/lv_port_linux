@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DLV_CONF_INCLUDE_SIMPLE -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE
 
-C_INCLUDES = -I/home/sadash/lv_port_linux/src/lib -isystem /home/sadash/lv_port_linux -isystem /home/sadash/lv_port_linux/lvgl -isystem /home/sadash/lv_port_linux/lvgl/examples -isystem /home/sadash/lv_port_linux/lvgl/demos
+C_INCLUDES = -I/home/sadash/lv_port_linux/src/lib -I/usr/include/libevdev-1.0 -isystem /home/sadash/lv_port_linux -isystem /home/sadash/lv_port_linux/lvgl -isystem /home/sadash/lv_port_linux/lvgl/examples -isystem /home/sadash/lv_port_linux/lvgl/demos
 
-C_FLAGS =  -Wall -Wextra -Wpedantic -std=gnu99
+C_FLAGS =  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -std=gnu99
 

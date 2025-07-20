@@ -51,7 +51,7 @@ CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -250,7 +250,7 @@ CONFIG_LV_BUILD_EXAMPLES:BOOL=ON
 //If set - install the private headers
 CONFIG_LV_USE_PRIVATE_API:BOOL=OFF
 
-//Use the internal version of ThorVG
+//Build ThorVG
 CONFIG_LV_USE_THORVG_INTERNAL:BOOL=ON
 
 //Can be used to specify the include dir containing lv_conf.h,
@@ -277,6 +277,12 @@ LV_BUILD_SET_CONFIG_OPTS:BOOL=ON
 //Use Kconfig
 LV_BUILD_USE_KCONFIG:BOOL=OFF
 
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //Value Computed by CMake
 lvgl_BINARY_DIR:STATIC=/home/sadash/lv_port_linux/lvgl
 
@@ -285,6 +291,9 @@ lvgl_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 lvgl_SOURCE_DIR:STATIC=/home/sadash/lv_port_linux/lvgl
+
+//Path to a library.
+pkgcfg_lib_EVDEV_evdev:FILEPATH=/usr/lib/aarch64-linux-gnu/libevdev.so
 
 
 ########################
@@ -451,8 +460,49 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+EVDEV_CFLAGS:INTERNAL=-I/usr/include/libevdev-1.0/
+EVDEV_CFLAGS_I:INTERNAL=
+EVDEV_CFLAGS_OTHER:INTERNAL=
+EVDEV_FOUND:INTERNAL=1
+EVDEV_INCLUDEDIR:INTERNAL=/usr/include
+EVDEV_INCLUDE_DIRS:INTERNAL=/usr/include/libevdev-1.0/
+EVDEV_LDFLAGS:INTERNAL=-L/usr/lib/aarch64-linux-gnu;-levdev
+EVDEV_LDFLAGS_OTHER:INTERNAL=
+EVDEV_LIBDIR:INTERNAL=/usr/lib/aarch64-linux-gnu
+EVDEV_LIBRARIES:INTERNAL=evdev
+EVDEV_LIBRARY_DIRS:INTERNAL=/usr/lib/aarch64-linux-gnu
+EVDEV_LIBS:INTERNAL=
+EVDEV_LIBS_L:INTERNAL=
+EVDEV_LIBS_OTHER:INTERNAL=
+EVDEV_LIBS_PATHS:INTERNAL=
+EVDEV_MODULE_NAME:INTERNAL=libevdev
+EVDEV_PREFIX:INTERNAL=/usr
+EVDEV_STATIC_CFLAGS:INTERNAL=-I/usr/include/libevdev-1.0/
+EVDEV_STATIC_CFLAGS_I:INTERNAL=
+EVDEV_STATIC_CFLAGS_OTHER:INTERNAL=
+EVDEV_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/libevdev-1.0/
+EVDEV_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/aarch64-linux-gnu;-levdev
+EVDEV_STATIC_LDFLAGS_OTHER:INTERNAL=
+EVDEV_STATIC_LIBDIR:INTERNAL=
+EVDEV_STATIC_LIBRARIES:INTERNAL=evdev
+EVDEV_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/aarch64-linux-gnu
+EVDEV_STATIC_LIBS:INTERNAL=
+EVDEV_STATIC_LIBS_L:INTERNAL=
+EVDEV_STATIC_LIBS_OTHER:INTERNAL=
+EVDEV_STATIC_LIBS_PATHS:INTERNAL=
+EVDEV_VERSION:INTERNAL=1.13.0
+EVDEV_libevdev_INCLUDEDIR:INTERNAL=
+EVDEV_libevdev_LIBDIR:INTERNAL=
+EVDEV_libevdev_PREFIX:INTERNAL=
+EVDEV_libevdev_VERSION:INTERNAL=
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v1.8.1()]
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/bin/python3][cfound components: Interpreter ][v3.11.2()]
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //Compiler reason failure
@@ -464,6 +514,13 @@ _Python_EXECUTABLE:INTERNAL=/usr/bin/python3
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;2;64;;cpython-311-aarch64-linux-gnu;/usr/lib/python3.11;/usr/lib/python3.11;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=4c8bfa8951e99fa32e4000a94f8c04a2
+//Interpreter reason failure
+_Python_Interpreter_REASON_FAILURE:INTERNAL=
 //NumPy reason failure
 _Python_NumPy_REASON_FAILURE:INTERNAL=
+__pkg_config_arguments_EVDEV:INTERNAL=REQUIRED;libevdev
+__pkg_config_checked_EVDEV:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_EVDEV_evdev
+pkgcfg_lib_EVDEV_evdev-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib/aarch64-linux-gnu
 

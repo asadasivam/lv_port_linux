@@ -6,5 +6,5 @@ C_DEFINES = -DLV_CONF_INCLUDE_SIMPLE -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIM
 
 C_INCLUDES = -I/home/sadash/lv_port_linux/src/lib -I/home/sadash/lv_port_linux
 
-C_FLAGS =  -Wall -Wextra -Wpedantic -std=gnu99
+C_FLAGS =  -Wall -Wextra -Wpedantic -O3 -DNDEBUG -std=gnu99
 

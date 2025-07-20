@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.o"
+  "CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.o.d"
   "CMakeFiles/lvglsim.dir/src/lib/driver_backends.c.o"
   "CMakeFiles/lvglsim.dir/src/lib/driver_backends.c.o.d"
+  "CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.o"
+  "CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.o.d"
   "CMakeFiles/lvglsim.dir/src/lib/mouse_cursor_icon.c.o"
   "CMakeFiles/lvglsim.dir/src/lib/mouse_cursor_icon.c.o.d"
   "CMakeFiles/lvglsim.dir/src/lib/simulator_util.c.o"

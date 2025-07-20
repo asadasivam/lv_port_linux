@@ -214,6 +214,19 @@ lvgl/fast:
 .PHONY : lvgl/fast
 
 #=============================================================================
+# Target rules for targets named lvgl_thorvg
+
+# Build rule for target.
+lvgl_thorvg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lvgl_thorvg
+.PHONY : lvgl_thorvg
+
+# fast build rule for target.
+lvgl_thorvg/fast:
+	$(MAKE) $(MAKESILENT) -f lvgl/CMakeFiles/lvgl_thorvg.dir/build.make lvgl/CMakeFiles/lvgl_thorvg.dir/build
+.PHONY : lvgl_thorvg/fast
+
+#=============================================================================
 # Target rules for targets named lvgl_examples
 
 # Build rule for target.
@@ -238,6 +251,33 @@ lvgl_demos: cmake_check_build_system
 lvgl_demos/fast:
 	$(MAKE) $(MAKESILENT) -f lvgl/CMakeFiles/lvgl_demos.dir/build.make lvgl/CMakeFiles/lvgl_demos.dir/build
 .PHONY : lvgl_demos/fast
+
+src/lib/display_backends/fbdev.o: src/lib/display_backends/fbdev.c.o
+.PHONY : src/lib/display_backends/fbdev.o
+
+# target to build an object file
+src/lib/display_backends/fbdev.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl_linux.dir/build.make CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvglsim.dir/build.make CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.o
+.PHONY : src/lib/display_backends/fbdev.c.o
+
+src/lib/display_backends/fbdev.i: src/lib/display_backends/fbdev.c.i
+.PHONY : src/lib/display_backends/fbdev.i
+
+# target to preprocess a source file
+src/lib/display_backends/fbdev.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl_linux.dir/build.make CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvglsim.dir/build.make CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.i
+.PHONY : src/lib/display_backends/fbdev.c.i
+
+src/lib/display_backends/fbdev.s: src/lib/display_backends/fbdev.c.s
+.PHONY : src/lib/display_backends/fbdev.s
+
+# target to generate assembly for a file
+src/lib/display_backends/fbdev.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl_linux.dir/build.make CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvglsim.dir/build.make CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.s
+.PHONY : src/lib/display_backends/fbdev.c.s
 
 src/lib/driver_backends.o: src/lib/driver_backends.c.o
 .PHONY : src/lib/driver_backends.o
@@ -265,6 +305,33 @@ src/lib/driver_backends.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl_linux.dir/build.make CMakeFiles/lvgl_linux.dir/src/lib/driver_backends.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvglsim.dir/build.make CMakeFiles/lvglsim.dir/src/lib/driver_backends.c.s
 .PHONY : src/lib/driver_backends.c.s
+
+src/lib/indev_backends/evdev.o: src/lib/indev_backends/evdev.c.o
+.PHONY : src/lib/indev_backends/evdev.o
+
+# target to build an object file
+src/lib/indev_backends/evdev.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl_linux.dir/build.make CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvglsim.dir/build.make CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.o
+.PHONY : src/lib/indev_backends/evdev.c.o
+
+src/lib/indev_backends/evdev.i: src/lib/indev_backends/evdev.c.i
+.PHONY : src/lib/indev_backends/evdev.i
+
+# target to preprocess a source file
+src/lib/indev_backends/evdev.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl_linux.dir/build.make CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvglsim.dir/build.make CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.i
+.PHONY : src/lib/indev_backends/evdev.c.i
+
+src/lib/indev_backends/evdev.s: src/lib/indev_backends/evdev.c.s
+.PHONY : src/lib/indev_backends/evdev.s
+
+# target to generate assembly for a file
+src/lib/indev_backends/evdev.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl_linux.dir/build.make CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvglsim.dir/build.make CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.s
+.PHONY : src/lib/indev_backends/evdev.c.s
 
 src/lib/mouse_cursor_icon.o: src/lib/mouse_cursor_icon.c.o
 .PHONY : src/lib/mouse_cursor_icon.o
@@ -361,10 +428,17 @@ help:
 	@echo "... lvgl_demos"
 	@echo "... lvgl_examples"
 	@echo "... lvgl_linux"
+	@echo "... lvgl_thorvg"
 	@echo "... lvglsim"
+	@echo "... src/lib/display_backends/fbdev.o"
+	@echo "... src/lib/display_backends/fbdev.i"
+	@echo "... src/lib/display_backends/fbdev.s"
 	@echo "... src/lib/driver_backends.o"
 	@echo "... src/lib/driver_backends.i"
 	@echo "... src/lib/driver_backends.s"
+	@echo "... src/lib/indev_backends/evdev.o"
+	@echo "... src/lib/indev_backends/evdev.i"
+	@echo "... src/lib/indev_backends/evdev.s"
 	@echo "... src/lib/mouse_cursor_icon.o"
 	@echo "... src/lib/mouse_cursor_icon.i"
 	@echo "... src/lib/mouse_cursor_icon.s"

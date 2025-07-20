@@ -125,12 +125,42 @@ CMakeFiles/lvglsim.dir/src/lib/simulator_util.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lvglsim.dir/src/lib/simulator_util.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sadash/lv_port_linux/src/lib/simulator_util.c -o CMakeFiles/lvglsim.dir/src/lib/simulator_util.c.s
 
+CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.o: CMakeFiles/lvglsim.dir/flags.make
+CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.o: src/lib/indev_backends/evdev.c
+CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.o: CMakeFiles/lvglsim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sadash/lv_port_linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.o -MF CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.o.d -o CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.o -c /home/sadash/lv_port_linux/src/lib/indev_backends/evdev.c
+
+CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sadash/lv_port_linux/src/lib/indev_backends/evdev.c > CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.i
+
+CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sadash/lv_port_linux/src/lib/indev_backends/evdev.c -o CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.s
+
+CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.o: CMakeFiles/lvglsim.dir/flags.make
+CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.o: src/lib/display_backends/fbdev.c
+CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.o: CMakeFiles/lvglsim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sadash/lv_port_linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.o -MF CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.o.d -o CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.o -c /home/sadash/lv_port_linux/src/lib/display_backends/fbdev.c
+
+CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sadash/lv_port_linux/src/lib/display_backends/fbdev.c > CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.i
+
+CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sadash/lv_port_linux/src/lib/display_backends/fbdev.c -o CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.s
+
 # Object files for target lvglsim
 lvglsim_OBJECTS = \
 "CMakeFiles/lvglsim.dir/src/main.c.o" \
 "CMakeFiles/lvglsim.dir/src/lib/driver_backends.c.o" \
 "CMakeFiles/lvglsim.dir/src/lib/mouse_cursor_icon.c.o" \
-"CMakeFiles/lvglsim.dir/src/lib/simulator_util.c.o"
+"CMakeFiles/lvglsim.dir/src/lib/simulator_util.c.o" \
+"CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.o" \
+"CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.o"
 
 # External object files for target lvglsim
 lvglsim_EXTERNAL_OBJECTS =
@@ -139,16 +169,20 @@ bin/lvglsim: CMakeFiles/lvglsim.dir/src/main.c.o
 bin/lvglsim: CMakeFiles/lvglsim.dir/src/lib/driver_backends.c.o
 bin/lvglsim: CMakeFiles/lvglsim.dir/src/lib/mouse_cursor_icon.c.o
 bin/lvglsim: CMakeFiles/lvglsim.dir/src/lib/simulator_util.c.o
+bin/lvglsim: CMakeFiles/lvglsim.dir/src/lib/indev_backends/evdev.c.o
+bin/lvglsim: CMakeFiles/lvglsim.dir/src/lib/display_backends/fbdev.c.o
 bin/lvglsim: CMakeFiles/lvglsim.dir/build.make
 bin/lvglsim: liblvgl_linux.a
 bin/lvglsim: lvgl/lib/liblvgl.a
+bin/lvglsim: lvgl/lib/liblvgl_thorvg.a
 bin/lvglsim: lvgl/lib/liblvgl_examples.a
 bin/lvglsim: lvgl/lib/liblvgl_demos.a
 bin/lvglsim: lvgl/lib/liblvgl.a
+bin/lvglsim: lvgl/lib/liblvgl_thorvg.a
 bin/lvglsim: lvgl/lib/liblvgl_examples.a
 bin/lvglsim: lvgl/lib/liblvgl_demos.a
 bin/lvglsim: CMakeFiles/lvglsim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sadash/lv_port_linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable bin/lvglsim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sadash/lv_port_linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable bin/lvglsim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lvglsim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

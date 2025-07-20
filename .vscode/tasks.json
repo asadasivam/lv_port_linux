@@ -8,10 +8,13 @@
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
-				//"${workspaceFolder}/src/lib/driver_backends.c",
-				//"${workspaceFolder}/src/lib/simulator_util.c",
-				//"${workspaceFolder}/lvgl/demos/widgets/lv_demo_widgets.c",
-				"${file}",
+				"${workspaceFolder}/src/main.c",
+				"${workspaceFolder}/src/lib/driver_backends.c",
+				"${workspaceFolder}/src/lib/simulator_util.c",
+				"${workspaceFolder}/src/lib/display_backends/fbdev.c",
+				"${workspaceFolder}/src/lib/indev_backends/evdev.c",
+				"${workspaceFolder}/lvgl/src/lv_init.c",
+				"${workspaceFolder}/lvgl/demos/widgets/lv_demo_widgets.c",
 				"-I${workspaceFolder}",
 				"-I${workspaceFolder}/lvgl",
 				"-I${workspaceFolder}/lvgl/src",
@@ -19,7 +22,7 @@
 				"-I${workspaceFolder}/src",
 				"-I${workspaceFolder}/src/lib",
 				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}"
+				"${workspaceFolder}/build/main"
 			],
 			"options": {
 				"cwd": "${fileDirname}"

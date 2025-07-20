@@ -111,11 +111,41 @@ CMakeFiles/lvgl_linux.dir/src/lib/simulator_util.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lvgl_linux.dir/src/lib/simulator_util.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sadash/lv_port_linux/src/lib/simulator_util.c -o CMakeFiles/lvgl_linux.dir/src/lib/simulator_util.c.s
 
+CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.o: CMakeFiles/lvgl_linux.dir/flags.make
+CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.o: src/lib/indev_backends/evdev.c
+CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.o: CMakeFiles/lvgl_linux.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sadash/lv_port_linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.o -MF CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.o.d -o CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.o -c /home/sadash/lv_port_linux/src/lib/indev_backends/evdev.c
+
+CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sadash/lv_port_linux/src/lib/indev_backends/evdev.c > CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.i
+
+CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sadash/lv_port_linux/src/lib/indev_backends/evdev.c -o CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.s
+
+CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.o: CMakeFiles/lvgl_linux.dir/flags.make
+CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.o: src/lib/display_backends/fbdev.c
+CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.o: CMakeFiles/lvgl_linux.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sadash/lv_port_linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.o -MF CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.o.d -o CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.o -c /home/sadash/lv_port_linux/src/lib/display_backends/fbdev.c
+
+CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sadash/lv_port_linux/src/lib/display_backends/fbdev.c > CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.i
+
+CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sadash/lv_port_linux/src/lib/display_backends/fbdev.c -o CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.s
+
 # Object files for target lvgl_linux
 lvgl_linux_OBJECTS = \
 "CMakeFiles/lvgl_linux.dir/src/lib/driver_backends.c.o" \
 "CMakeFiles/lvgl_linux.dir/src/lib/mouse_cursor_icon.c.o" \
-"CMakeFiles/lvgl_linux.dir/src/lib/simulator_util.c.o"
+"CMakeFiles/lvgl_linux.dir/src/lib/simulator_util.c.o" \
+"CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.o" \
+"CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.o"
 
 # External object files for target lvgl_linux
 lvgl_linux_EXTERNAL_OBJECTS =
@@ -123,9 +153,11 @@ lvgl_linux_EXTERNAL_OBJECTS =
 liblvgl_linux.a: CMakeFiles/lvgl_linux.dir/src/lib/driver_backends.c.o
 liblvgl_linux.a: CMakeFiles/lvgl_linux.dir/src/lib/mouse_cursor_icon.c.o
 liblvgl_linux.a: CMakeFiles/lvgl_linux.dir/src/lib/simulator_util.c.o
+liblvgl_linux.a: CMakeFiles/lvgl_linux.dir/src/lib/indev_backends/evdev.c.o
+liblvgl_linux.a: CMakeFiles/lvgl_linux.dir/src/lib/display_backends/fbdev.c.o
 liblvgl_linux.a: CMakeFiles/lvgl_linux.dir/build.make
 liblvgl_linux.a: CMakeFiles/lvgl_linux.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sadash/lv_port_linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library liblvgl_linux.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sadash/lv_port_linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C static library liblvgl_linux.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/lvgl_linux.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lvgl_linux.dir/link.txt --verbose=$(VERBOSE)
 
